@@ -1,0 +1,250 @@
+body{
+  background-color:#111;
+  margin:0;
+  padding:0;
+  font-family: "Open Sans", sans-serif;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  /* The overflow y is here because all content is coded not to exceed the viewport height and width */
+  overflow-y: hidden;
+  overflow-x:hidden;
+}
+
+
+.show-menu{
+  position:fixed;
+  top:15px;
+  right:0px;
+  z-index:998;
+  width:calc(100% - 30px);
+  max-width:52px;
+  transition: all 1s;
+  opacity:0.3;
+  cursor: pointer;
+}
+
+.show-menu:hover{
+  opacity:1;
+}
+
+
+.show-menu.show{
+   width:calc(100% - 30px);
+   max-width:530px;
+}
+
+.show-menu svg{
+  transition: all 0.5s;
+  fill:#fff;
+  transform: rotate(405deg);
+  background-color:#000;
+  border-radius:50%;
+}
+
+.show-menu.show svg{
+   transform: rotate(0);
+}
+
+
+.vid-menu{
+  z-index:999;
+  visibility: hidden;
+  display:block;
+  margin: 0;
+  transition-delay:1s;
+  transition-property: opacity;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  position:fixed;
+  transform: translate3d(0,0,0);
+  right:0;
+  height:calc(100vh);
+  border-style:solid;
+  border-width:0 0 0 1px;
+  border-color:#ffffff50;
+  max-width:480px;
+  width:calc(100% - 80px);
+  background-color:#00000090;
+  opacity:0;
+  transition: opacity 1s;
+  overflow-y:scroll;
+  box-shadow: 0 0 30px 0 #000000;
+}
+
+.vid-menu.show{
+  visibility: visible;
+  opacity:1;
+}
+
+.buttons{
+  display: block;
+  position: relative;
+  padding: 0 0 60px 0;
+  width: 100%;
+}
+
+.menu-overlay {
+  visibility: hidden;
+  display: block;
+  position:fixed;
+  top:0;
+  right:0;
+  width:100vw;
+  height:100vh;
+  background: linear-gradient(90deg, rgba(0,0,0,0) 0  , rgba(0,0,0,1) 100%);
+  opacity: 0;
+  transition: all 1s;
+  z-index: 995;
+}
+
+.menu-overlay.show{
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.vid-menu.show:hover{
+  opacity:1;
+}
+
+.media-btn {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  border-style:solid;
+  border-width: 0 0 1px 0;
+  border-color:#ffffff50;
+  text-align: left;
+}
+
+.media-btn.no-dl .track{
+  border:none;
+}
+
+.vid-menu .media-btn:first-child {
+
+}
+
+.vid-menu .media-btn:last-child {
+}
+
+.track {
+  display: flex;
+  flex: 1 1 360px;
+  transition: all 0.5s;
+  padding: 15px;
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  min-height: 40px;
+  border-style: solid;
+  border-width: 0 1px 0 0;
+  border-color:#ffffff50;
+  background-color:#00000050;
+  font-size:14px;
+  line-height:1em;
+}
+
+.reload-btn {
+  display: flex;
+  flex: 1 1 360px;
+  transition: all 0.5s;
+  padding: 15px;
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  min-height: 40px;
+  background-color:#00000050;
+  font-size:14px;
+  line-height:1em;
+  text-align: center;
+  gap:10px; 
+}
+
+
+.dl-btn {
+  transition: all 0.5s;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  padding:20px;
+}
+
+.track:hover {
+  background-color: #ffffff60;
+  color: #000;
+}
+
+.track.active, .track.active:hover{
+  background-color: #ffffff80;
+  color: #000;
+}
+
+.track.active svg {
+  opacity: 1;
+}
+
+.menu-buttons {
+  display: flex;
+  flex: 1 1 360px;
+  opacity: 0.3;
+  transition: all 1s;
+  color: #fff;
+  transition-delay: 250ms;
+}
+
+.main-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 6 1 360px;
+  height:100vh;
+  border-radius: 12px;
+  opacity:1;
+  background-color:#00000080;
+  transition: all 1s;
+  opacity: 0;
+}
+
+.main-video video {
+  display:block;
+  position:relative;
+  overflow: hidden;
+  border-radius: 12px;
+  width: calc(100vw - 40px) !important;
+  max-width:calc(100vw - 40px) !important;
+  max-height: calc(100vh - 40px);
+  box-shadow: 0 0 30px 0 #000000;
+  opacity: 0;
+  transition-delay:1s;
+  transition-property: opacity;
+  transition: opacity 1s;
+}
+
+.main-video.show {
+  opacity: 1;
+}
+
+.main-video.show video{
+  opacity: 1;
+}
+
+
+.dl-link {
+  color: #fff;
+}

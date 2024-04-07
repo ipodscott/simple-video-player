@@ -1,0 +1,23 @@
+{
+  "background-image": "vid_bg.webp",
+  "site-title": "Trailers",
+  "description": "Movie Trailers at Hazzardlabs.com",
+  "movies": [
+	{
+		"title": "1943: The Rise of Hydra",
+		"url": "1943.mp4"
+	},
+	{
+		"title": "Furiosa Trailer 1",
+		"url": "furiosa.mp4"
+	},
+	{
+		"title": "The Fall Guy",
+		"url": "the_fall_guy.mp4"
+	},
+	{
+		"title": "The Meg 2",
+		"url": "meg2.mp4"
+	}
+  ]
+}
