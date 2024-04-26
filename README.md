@@ -2,6 +2,8 @@
 
 Simple Video Player is a lightweight, easy-to-use web application designed to stream videos directly from a JSON-controlled interface. The player is perfect for users who wish to have a customizable video streaming site without the complexity of larger platforms. Content on the site, including the video menu, background image, site title, and description, is managed through a single `data.json` file. Additionally, the site supports direct video play through URL parameters, making it versatile for various use cases.
 
+[Link text](https://website-name.com)
+
 ## Features
 
 - **Dynamic Content Management**: Control the site's video menu, background, title, and description from a singular `data.json` file.
